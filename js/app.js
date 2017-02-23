@@ -7,26 +7,43 @@ The function will add the following content inside the paragraph with the id of 
 var bacon = "Shoulder turducken brisket, kevin swine andouille tri-tip salami tail ham sausage pork loin. Ribeye short loin rump kielbasa pork. Capicola short loin turducken corned beef tongue, chuck leberkas salami frankfurter. Kielbasa fatback pancetta, ground round meatball turducken jowl ribeye alcatra sirloin bacon corned beef beef ribs short loin. Pork belly spare ribs biltong corned beef meatball short ribs tongue alcatra swine drumstick. Biltong shankle kevin, cupim sirloin bresaola brisket. Tail pork belly biltong ball tip tri-tip, pig jerky cow pastrami prosciutto ;ground round bacon capicola tongue meatball.";
 
 
+function moreContent(){
+	var addMoreText = document.getElementById('more');
+	addMoreText.innerHTML = bacon;
+}
+
 //2. HTTP
 /*Create a function named `lessContent` that will initiate the `Show Less` link after clicking on it.
 
 The function will hide the contents in the pargraph with the id of `less` after clicking on the `Show Less` link.*/
-
-
-
-//3. Tacocat, The Original Palindrome King
-/*Create a function named `zoom` that will increase the font size of the paragraph with the id of `biggie` after hovering your mouse over it. Increae the font size to 150%*/
-
-function zoom(){
-  
+function lessContent(){
+	var showLess = document.getElementById('less');
+	showLess.innerHTML = '';
 }
 
+//3. Tacocat, The Original Palindrome King
+/*Create a function named `zoom` that will increase the font size of the paragraph with the id of `biggie` after hovering your mouse over it. Increase the font size to 150%*/
+
+function zoom(){
+  var makeBig = document.getElementById("biggie");
+  makeBig.style.fontSize = "150%";
+}
 
 //4. McDonalds
 /*Create a variable name menuItems and assign it an array of three of your favorite items at McDonald's.
 
-Next, create a function named valueMenu that will display your favorite items in the paragraph the the id of `menu` after clicking on the showMenu paragraph.*/
+Next, create a function named valueMenu that will display your favorite items in the paragraph with the id of `menu` after clicking on the showMenu paragraph.*/
+var menuItems = ["MacChicken, french fries, MacFlurry"];
+function valueMenu(){
+	var menuList = document.getElementById("menu3");
+	var listItems = document.createElement("li");
+	listItems.id = "myFaves";
+	for(var i = 0; i < menuItems.length; i++){
+		listItems.innerHTML = "menuItems[i]";
+		menuList.appendChild(listItems);
+	}
 
+}
 
 
 //5. Gin.
